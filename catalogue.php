@@ -71,7 +71,7 @@ $_SESSION['date']=getdate();
             ?>
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="">Envoyer au Panier</button>
         </form>
     </div>
 </main>

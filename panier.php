@@ -107,6 +107,12 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
             <button type="Submit">recalculer</button>
         </form>
     </div>
+
+    <div>
+        <a class = "croixrouge" href="catalogue.php">Retour Catalogue</a>
+
+    </div>
+
 </main>
 <!-- FOOTER -->
 <footer>

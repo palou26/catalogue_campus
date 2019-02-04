@@ -3,19 +3,16 @@
 
 
 <?php
+include 'functions.php';
+
+$idArticle=[1,2,3];
+$NomArticle=["Sac Noir trop Beau trop cool","Sac à dos super top","Sac à dos de qualité"];
+$PrixArticle=[50, 80, 100] ;
 
 
-$id=[1,2,3];
-$article=["Sac Noir trop Beau trop cool","Sac à dos super top","Sac à dos de qualité"];
-$prix=[50, 80, 100] ;
-
+print_r(afficheArticle(2, $idArticle, $NomArticle, $PrixArticle));
 
 ?>
-
-
-
-
-
 
 
 
@@ -58,14 +55,14 @@ echo '
         <div class="row align-items-center">
 
             <div class="col-md-3">
-                <img src="photos/sac'.$id[$i].'.jpg" class="photosac" alt="Photo du Sac 1" title="Photo du Sac 1">
+                <img src="photos/sac'.$idArticle[$i].'.jpg" class="photosac" alt="Photo du Sac 1" title="Photo du Sac 1">
             </div>
            <div class="col-md-7">
-               <h2>  '.$article[$i].'</h2>
+               <h2>  '.$NomArticle[$i].'</h2>
            </div>
 
            <div class="col-md-2  align-items-center">
-               <p class="prix">'.$prix[$i].'€</p>
+               <p class="prix">'.$PrixArticle[$i].'€</p>
            </div>
 
         </div>

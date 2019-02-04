@@ -1,7 +1,8 @@
 <?php
 include 'functions.php';
 include 'bdd.php';
-
+session_start();
+$_SESSION['date']=getdate();
 
 // print_r(afficheArticle(2, $idArticle, $NomArticle, $PrixArticle));
 

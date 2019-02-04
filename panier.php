@@ -1,8 +1,25 @@
 <?php
 include 'functions.php';
 include 'bdd.php';
+session_start ();
 
 
+
+
+
+if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
+
+    $_SESSION['ChoosenArcticle'] = $_POST['ChoosenArcticle'];
+    $ChoosenArcticle = $_POST['ChoosenArcticle'];
+
+} elseif (isset($_SESSION['ChoosenArcticle'])) {
+    $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
+    if(isset($_GET['idsuppr'])){
+        $idsuppr = $_GET['idsuppr'];
+        $ChoosenArcticle=array_diff($ChoosenArcticle, [$idsuppr]);
+        $_SESSION['ChoosenArcticle'] = $ChoosenArcticle ;
+    }
+}
 
 ?>
 
@@ -40,42 +57,61 @@ include 'bdd.php';
 
 <main>
     <div class="container">
-        <?php
-        $CommandSum = 0;
-        if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
-            foreach ($_POST['ChoosenArcticle'] as $ChoosenArcticle) {
+        <form action="panier.php" method="post">
+            <?php
+            $CommandSum = 0;
+            foreach ($ChoosenArcticle as $ChoosenArcticleid) {
 
-                $DescrChoosenAricle = afficheArticle($ChoosenArcticle, $idArticle, $NomArticle, $PrixArticle);
-                $CommandSum =  $CommandSum+ $DescrChoosenAricle['prix'];
+                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $idArticle, $NomArticle, $PrixArticle);
+                $CommandSum = $CommandSum + $DescrChoosenAricle['prix'];
                 echo '
         <div class="row align-items-center">
 
             <div class="col-md-3">
                 <img src="photos/sac' . $DescrChoosenAricle['id'] . '.jpg" class="photosac" alt="Photo du Sac ' . $DescrChoosenAricle['id'] . '" title="Photo du Sac ' . $DescrChoosenAricle['id'] . '">
             </div>
-           <div class="col-md-6">
+           <div class="col-md-5">
                <h2>  ' . $DescrChoosenAricle['nom'] . '</h2>
            </div>
 
            <div class="col-md-2  align-items-center">
-               <p class="prix">' . $DescrChoosenAricle['prix'] . '€</p>
+               <p class="prix">' . $DescrChoosenAricle['prix'] . '€</p>               
+           </div>
+
+
+          <div class="col-md-2  align-items-center">
+              <div  class="row">
+                   <p> Qté </p>  
+              </div> 
+               
+               <div  class="row">
+                   <p Qté </p>  
+               <form>
+               <button type="submit" formaction="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">Suppr.</button>
+               </form>
+               </div>             
            </div>
            
-
+           
         </div>
     ';
             }
-        }
 
-        //Display the sum of the command
-echo '
+            //Display the sum of the command
+            echo '
         <div class="row align-items-center">
-         <h3> Le total de la commande est : '. $CommandSum . ' €</h3>
+            <div class="col-md-10  align-items-center">
+                 <h3> Le total de la commande est  : </h3>
+            </div>
+            <div class="col-md-2  align-items-center">
+                 <p class="totalcommande"> ' . $CommandSum . ' €</p>
+            </div>
         </div>
         ';
 
-        ?>
-
+            ?>
+            <button type="Submit">recalculer</button>
+        </form>
     </div>
 </main>
 <!-- FOOTER -->

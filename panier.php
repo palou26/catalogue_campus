@@ -3,7 +3,6 @@ include 'functions.php';
 include 'bdd.php';
 
 
-// print_r(afficheArticle(2, $idArticle, $NomArticle, $PrixArticle));
 
 ?>
 
@@ -23,7 +22,7 @@ include 'bdd.php';
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>BAGS STORE Catalogue</title>
+    <title>BAGS STORE Mon Panier</title>
 </head>
 
 <body>
@@ -34,44 +33,41 @@ include 'bdd.php';
     </div>
 
     <div class="container-fluid ">
-        <h2>Catalogue</h2>
+        <h2>Mon Panier</h2>
     </div>
 
 </header>
 
 <main>
     <div class="container">
-        <form action="panier.php" method="post">
-            <?php
+        <?php
 
-
-            for ($i = 0; $i <= 2; $i++) {
+        if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
+            foreach ($_POST['ChoosenArcticle'] as $ChoosenArcticle) {
+                // eg. "I have a grapeChoosenArcticle!"
+                // -- insert into database call might go here
+                $DescrChoosenAricle = afficheArticle($ChoosenArcticle, $idArticle, $NomArticle, $PrixArticle);
                 echo '
         <div class="row align-items-center">
 
             <div class="col-md-3">
-                <img src="photos/sac' . $idArticle[$i] . '.jpg" class="photosac" alt="Photo du Sac 1" title="Photo du Sac 1">
+                <img src="photos/sac' . $DescrChoosenAricle['id'] . '.jpg" class="photosac" alt="Photo du Sac ' . $DescrChoosenAricle['id'] . '" title="Photo du Sac ' . $DescrChoosenAricle['id'] . '">
             </div>
            <div class="col-md-6">
-               <h2>  ' . $NomArticle[$i] . '</h2>
+               <h2>  ' . $DescrChoosenAricle['nom'] . '</h2>
            </div>
 
            <div class="col-md-2  align-items-center">
-               <p class="prix">' . $PrixArticle[$i] . '€</p>
+               <p class="prix">' . $DescrChoosenAricle['prix'] . '€</p>
            </div>
            
-           <div class="col-md-1  form-check align-items-center">
-                <input class="form-check-input" name="ChoosenArcticle[]" type="checkbox" value="'.$idArticle[$i].'" id="article'.$idArticle[$i].'">
-           </div>
 
         </div>
     ';
             }
-            ?>
+        }
+        ?>
 
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
     </div>
 </main>
 <!-- FOOTER -->

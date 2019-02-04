@@ -41,12 +41,12 @@ include 'bdd.php';
 <main>
     <div class="container">
         <?php
-
+        $CommandSum = 0;
         if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
             foreach ($_POST['ChoosenArcticle'] as $ChoosenArcticle) {
-                // eg. "I have a grapeChoosenArcticle!"
-                // -- insert into database call might go here
+
                 $DescrChoosenAricle = afficheArticle($ChoosenArcticle, $idArticle, $NomArticle, $PrixArticle);
+                $CommandSum =  $CommandSum+ $DescrChoosenAricle['prix'];
                 echo '
         <div class="row align-items-center">
 
@@ -66,6 +66,14 @@ include 'bdd.php';
     ';
             }
         }
+
+        //Display the sum of the command
+echo '
+        <div class="row align-items-center">
+         <h3> Le total de la commande est : '. $CommandSum . ' €</h3>
+        </div>
+        ';
+
         ?>
 
     </div>

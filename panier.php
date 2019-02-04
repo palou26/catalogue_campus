@@ -1,10 +1,7 @@
 <?php
 include 'functions.php';
 include 'bdd.php';
-session_start ();
-
-
-
+session_start();
 
 
 if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
@@ -14,10 +11,10 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
 } elseif (isset($_SESSION['ChoosenArcticle'])) {
     $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
-    if(isset($_GET['idsuppr'])){
+    if (isset($_GET['idsuppr'])) {
         $idsuppr = $_GET['idsuppr'];
-        $ChoosenArcticle=array_diff($ChoosenArcticle, [$idsuppr]);
-        $_SESSION['ChoosenArcticle'] = $ChoosenArcticle ;
+        $ChoosenArcticle = array_diff($ChoosenArcticle, [$idsuppr]);
+        $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
     }
 }
 
@@ -57,7 +54,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
 <main>
     <div class="container">
-        <form action="panier.php" method="post">
+        <form id="recalcul" action="panier.php" method="post">
             <?php
             $CommandSum = 0;
             foreach ($ChoosenArcticle as $ChoosenArcticleid) {
@@ -85,10 +82,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
               </div> 
                
                <div  class="row">
-                   <p Qté </p>  
-               <form>
-               <button type="submit" formaction="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">Suppr.</button>
-               </form>
+                    <a class = "croixrouge" href="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">&#x2718;</a> 
                </div>             
            </div>
            
@@ -100,7 +94,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
             //Display the sum of the command
             echo '
         <div class="row align-items-center">
-            <div class="col-md-10  align-items-center">
+            <div class="col-md-10  align-items-center divtotalcommand">
                  <h3> Le total de la commande est  : </h3>
             </div>
             <div class="col-md-2  align-items-center">

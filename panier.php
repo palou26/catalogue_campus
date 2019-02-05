@@ -12,25 +12,21 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
     $_SESSION['ChoosenArcticle'] = array_unique(array_merge($_SESSION['ChoosenArcticle'], $_POST['ChoosenArcticle']));
     $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
-    print_r("ajout d'article<br>");
+
 }
 
-$new=0;
+// on met la quantité à 1 si elle n'est pas encore enregistrée dans la session
 foreach ($ChoosenArcticle as $ChoosenArcticleId) {
     if (!isset($QtePerArticle[$ChoosenArcticleId])) {
         $QtePerArticle += [ $ChoosenArcticleId => 1 ];
         $errorQte += [ $ChoosenArcticleId => "" ];
-        print_r("Qté à 1<br>");
-        print_r($QtePerArticle);
-        $new=1;
+        $_SESSION['$QtePerArticle'] = $QtePerArticle;
+        $_SESSION['$errorQte'] = $errorQte;
     }
 }
 
 if (isset($_GET['idsuppr'])) {
     $idsuppr = $_GET['idsuppr'];
-    //print_r($ChoosenArcticle);
-    //print_r(array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr)))));
-    $keyASuppr = array_keys(array_diff($ChoosenArcticle, array_diff($ChoosenArcticle, array($idsuppr))));
     $ChoosenArcticle = array_diff($ChoosenArcticle, [$idsuppr]);
     $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
 
@@ -44,12 +40,9 @@ if (isset($_GET['idsuppr'])) {
 }
 
 
+// mise à jour des quantité
 
-
-
-//Quantité
-
-if (!isset($_GET['idsuppr']) & $new==0) {
+if (!isset($_GET['idsuppr']) ) {
     $QtePerArticle = $_SESSION['$QtePerArticle'];
     $errorQte = $_SESSION['$errorQte'];
     foreach ($ChoosenArcticle as $ChoosenArcticleId) {
@@ -60,19 +53,12 @@ if (!isset($_GET['idsuppr']) & $new==0) {
             } else {
                 $errorQte[$ChoosenArcticleId] = "Doit être un entier";
             }
-        } else {
-            print_r("cas2");
-            //array_push($QtePerArticle, 1);
-            //array_push($errorQte, "");
         }
     }
     $_SESSION['$QtePerArticle'] = $QtePerArticle;
     $_SESSION['$errorQte'] = $errorQte;
 }
 
-print_r($ChoosenArcticle);
-print_r("\n");
-print_r($QtePerArticle);
 
 ?>
 

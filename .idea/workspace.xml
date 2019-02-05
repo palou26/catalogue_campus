@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/bdd.php" description="include 'functions.php';" line="1" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18b6d9d9-ad8c-42c3-adcc-7117e0f9a24d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1626044218">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="catalogue" value="1" />
+          <entry key="css" value="2" />
+          <entry key="htm" value="1" />
+          <entry key="php" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="1" />
+          <entry key="PHP" value="10" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="348" />
+          <entry key="php" value="2415" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="348" />
+          <entry key="HTML" value="35" />
+          <entry key="PHP" value="2380" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tuto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" selection-start-line="3" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bdd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="12" selection-start-line="3" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="473" column="9" selection-start-line="473" selection-start-column="9" selection-end-line="473" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalogue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/panier.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="124" column="37" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>img</find>
+      <find>$article</find>
+      <find>\n\n\n\n\&lt;\?php\ninclude \'functions\.php\'\;\n\n\$idArticle\=\[1\,2\,3\]\;\n\$NomArticle\=\[\&quot;Sac Noir trop Beau trop cool\&quot;\,\&quot;Sac à dos super top\&quot;\,\&quot;Sac à dos de qualité\&quot;\]\;\n\$PrixArticle\=\[50\, 80\, 100\] \;\n\n\nprint_r\(afficheArticle\(2\, \$idArticle\, \$NomArticle\, \$PrixArticle\)\)\;\n\n\?\&gt;\n\n\n\n\n\&lt;\!doctype html\&gt;\n\&lt;html lang\=\&quot;fr\&quot;\&gt;\n\n\&lt;head\&gt;\n    \&lt;\!\-\- Required meta tags \-\-\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\, shrink\-to\-fit\=no\&quot;\&gt;\n    \&lt;meta name\=\&quot;description\&quot; content\=\&quot;Boutique de sacs\&quot;\&gt;\n    \&lt;\!\-\- Bootstrap CSS \-\-\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;https\:\/\/stackpath\.bootstrapcdn\.com\/bootstrap\/4\.2\.1\/css\/bootstrap\.min\.css\&quot; integrity\=\&quot;sha384\-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\&quot;\n          crossorigin\=\&quot;anonymous\&quot;\&gt;\n    \&lt;link href\=\&quot;https\:\/\/fonts\.googleapis\.com\/css\?family\=Open\+Sans\+Condensed\:300\&quot; rel\=\&quot;stylesheet\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;css\/style\.css\&quot;\&gt;\n\n    \&lt;title\&gt;BAGS STORE Catalogue\&lt;\/title\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\&lt;header\&gt;\n\n    \&lt;div class\=\&quot;container\-fluid \&quot;\&gt;\n        \&lt;h1\&gt;BAGS STORE\&lt;\/h1\&gt;\n    \&lt;\/div\&gt;\n\n\&lt;\/header\&gt;\n\n\&lt;main\&gt;\n    \&lt;div class\=\&quot;container\&quot;\&gt;\n        \&lt;form\&gt;\n\&lt;\?php\n\n\nfor \(\$i \= 0\; \$i \&lt;\= 2\; \$i\+\+\)\n        \{\necho \'\n        \&lt;div class\=\&quot;row align\-items\-center\&quot;\&gt;\n\n            \&lt;div class\=\&quot;col\-md\-3\&quot;\&gt;\n                \&lt;img src\=\&quot;photos\/sac\'\.\$idArticle\[\$i\]\.\'\.jpg\&quot; class\=\&quot;photosac\&quot; alt\=\&quot;Photo du Sac 1\&quot; title\=\&quot;Photo du Sac 1\&quot;\&gt;\n            \&lt;\/div\&gt;\n           \&lt;div class\=\&quot;col\-md\-7\&quot;\&gt;\n               \&lt;h2\&gt;  \'\.\$NomArticle\[\$i\]\.\'\&lt;\/h2\&gt;\n           \&lt;\/div\&gt;\n\n           \&lt;div class\=\&quot;col\-md\-2  align\-items\-center\&quot;\&gt;\n               \&lt;p class\=\&quot;prix\&quot;\&gt;\'\.\$PrixArticle\[\$i\]\.\'\€\&lt;\/p\&gt;\n           \&lt;\/div\&gt;\n\n        \&lt;\/div\&gt;\n    \'\;\n    \}\n\?\&gt;\n\n\n\n            \&lt;button type\=\&quot;submit\&quot; class\=\&quot;btn btn\-primary\&quot;\&gt;Submit\&lt;\/button\&gt;\n        \&lt;\/form\&gt;\n    \&lt;\/div\&gt;\n\&lt;\/main\&gt;\n\&lt;\!\-\- FOOTER \-\-\&gt;\n\&lt;footer\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/footer\&gt;\&lt;\!\-\- FIN FOOTER \-\-\&gt;\n\n\n\&lt;\!\-\- JQUERY \-\-\&gt;\n\&lt;script src\=\&quot;https\:\/\/code\.jquery\.com\/jquery\-3\.3\.1\.slim\.min\.js\&quot; integrity\=\&quot;sha384\-q8i\/X\+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH\+8abtTE1Pi6jizo\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script src\=\&quot;https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/popper\.js\/1\.14\.6\/umd\/popper\.min\.js\&quot; integrity\=\&quot;sha384\-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ\/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script src\=\&quot;https\:\/\/stackpath\.bootstrapcdn\.com\/bootstrap\/4\.2\.1\/js\/bootstrap\.min\.js\&quot; integrity\=\&quot;sha384\-B0UglyR\+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U\/mkkaduKaBhlAXv9k\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
+      <find>$prix</find>
+      <find>fruit</find>
+      <find>print</find>
+      <find>unset</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$NomArticle</replace>
+      <replace>$PrixArticle</replace>
+      <replace>ChoosenArcticle</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tuto.php" />
+        <option value="D:/_CAMPUS/Pluvinet_Pascal/2.HTML/MANP/www/css/style.css" />
+        <option value="$PROJECT_DIR$/catalogue" />
+        <option value="$PROJECT_DIR$/article.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/bdd.php" />
+        <option value="$PROJECT_DIR$/catalogue.php" />
+        <option value="$PROJECT_DIR$/panier.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tuto_leanphp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tuto_leanphp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/JetBrains/PhpStorm 2018.2.3/plugins/php/lib/php.jar!/stubs/standard/standard_9.php" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.article.php">
+    <configuration name="article.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/tuto_leanphp/article.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="tuto.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/tuto_leanphp/tuto.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.tuto.php" />
+      <item itemvalue="JavaScript Debug.article.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.article.php" />
+        <item itemvalue="JavaScript Debug.tuto.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18b6d9d9-ad8c-42c3-adcc-7117e0f9a24d" name="Default Changelist" comment="" />
+      <created>1548925230610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548925230610</updated>
+      <workItem from="1548925232934" duration="11032000" />
+      <workItem from="1549266142029" duration="20648000" />
+      <workItem from="1549353026029" duration="15162000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="46842000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.18123667" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.5595106" />
+      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32925472" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18123667" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.15239155" />
+      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32925472" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/_CAMPUS/Pluvinet_Pascal/2.HTML/MANP/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="93" lean-forward="true" selection-start-line="9" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue" />
+    <entry file="file://$PROJECT_DIR$/tuto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" selection-start-line="3" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2667">
+          <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="473" column="9" selection-start-line="473" selection-start-column="9" selection-end-line="473" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="12" selection-start-line="3" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="53" column="91" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="124" column="37" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

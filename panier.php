@@ -2,63 +2,77 @@
 include 'functions.php';
 include 'bdd.php';
 session_start();
-
+//initialisation
+$QtePerArticle = $_SESSION['$QtePerArticle'];
+$errorQte = $_SESSION['$errorQte'];
+$ChoosenArcticle = $_SESSION['ChoosenArcticle'];
 
 //on récuppère les articles choisis ou on les ajoute
 if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
-     $_SESSION['ChoosenArcticle'] = array_unique(array_merge($_SESSION['ChoosenArcticle'], $_POST['ChoosenArcticle']));
+    $_SESSION['ChoosenArcticle'] = array_unique(array_merge($_SESSION['ChoosenArcticle'], $_POST['ChoosenArcticle']));
     $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
+    print_r("ajout d'article<br>");
+}
 
-} elseif (isset($_SESSION['ChoosenArcticle'])) {
-    $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
-    if (isset($_GET['idsuppr'])) {
-        $idsuppr = $_GET['idsuppr'];
-        //print_r($ChoosenArcticle);
-        //print_r(array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr)))));
-        $keyASuppr = array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr))));
-        $ChoosenArcticle = array_values(array_diff($ChoosenArcticle, [$idsuppr]));
-        $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
-
+$new=0;
+foreach ($ChoosenArcticle as $ChoosenArcticleId) {
+    if (!isset($QtePerArticle[$ChoosenArcticleId])) {
+        $QtePerArticle += [ $ChoosenArcticleId => 1 ];
+        $errorQte += [ $ChoosenArcticleId => "" ];
+        print_r("Qté à 1<br>");
+        print_r($QtePerArticle);
+        $new=1;
     }
+}
 
+if (isset($_GET['idsuppr'])) {
+    $idsuppr = $_GET['idsuppr'];
+    //print_r($ChoosenArcticle);
+    //print_r(array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr)))));
+    $keyASuppr = array_keys(array_diff($ChoosenArcticle, array_diff($ChoosenArcticle, array($idsuppr))));
+    $ChoosenArcticle = array_values(array_diff($ChoosenArcticle, [$idsuppr]));
+    $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
+
+    //Quantité
+    unset($QtePerArticle[$idsuppr]);
+    unset($errorQte[$idsuppr]);
+
+    $_SESSION['$QtePerArticle'] = $QtePerArticle;
+    $_SESSION['$errorQte'] = $errorQte;
 
 }
+
+
+
 
 
 //Quantité
 
-if (!isset($_GET['idsuppr'])   ) {
-    $QtePerArticle = array();
-    $errorQte = array();
+if (!isset($_GET['idsuppr']) & $new==0) {
+    $QtePerArticle = $_SESSION['$QtePerArticle'];
+    $errorQte = $_SESSION['$errorQte'];
     foreach ($ChoosenArcticle as $ChoosenArcticleId) {
         if (isset($_POST['Qte' . $ChoosenArcticleId])) {
-            if ( preg_match('/^[0-9]+$/', $_POST['Qte' . $ChoosenArcticleId])) {
-                array_push($QtePerArticle, $_POST['Qte' . $ChoosenArcticleId]);
-                array_push($errorQte , "");
+            if (preg_match('/^[0-9]+$/', $_POST['Qte' . $ChoosenArcticleId])) {
+                $QtePerArticle[$ChoosenArcticleId] = $_POST['Qte' . $ChoosenArcticleId];
+                $errorQte[$ChoosenArcticleId] = "";
             } else {
-                array_push($QtePerArticle, 1);
-                array_push($errorQte , "Doit être un entier");
+                $errorQte[$ChoosenArcticleId] = "Doit être un entier";
             }
         } else {
-            array_push($QtePerArticle, 1);
-            array_push($errorQte , "");
+            print_r("cas2");
+            //array_push($QtePerArticle, 1);
+            //array_push($errorQte, "");
         }
     }
     $_SESSION['$QtePerArticle'] = $QtePerArticle;
     $_SESSION['$errorQte'] = $errorQte;
-} elseif (isset($_SESSION['$QtePerArticle'])) {
-    $QtePerArticle = $_SESSION['$QtePerArticle'];
-    $errorQte = $_SESSION['$errorQte'];
-    unset($QtePerArticle[$keyASuppr[0]]);
-    unset($errorQte[$keyASuppr[0]]);
-    $QtePerArticle = array_values($QtePerArticle);
-    $errorQte = array_values($errorQte);
-    $_SESSION['$QtePerArticle'] = $QtePerArticle;
-    $_SESSION['$errorQte'] = $errorQte;
-
 }
 
+print_r($ChoosenArcticle);
+print_r("\n");
+print_r($QtePerArticle);
 
 ?>
 
@@ -103,7 +117,7 @@ if (!isset($_GET['idsuppr'])   ) {
             foreach ($ChoosenArcticle as $key => $ChoosenArcticleid) {
 
                 $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $idArticle, $NomArticle, $PrixArticle);
-                $Qte = $QtePerArticle[$key];
+                $Qte = $QtePerArticle[$ChoosenArcticleid];
                 $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
                 echo '
         <div class="row align-items-center articlelist">
@@ -124,7 +138,7 @@ if (!isset($_GET['idsuppr'])   ) {
               <div class="row form-group">
                 <label class ="col-6" for="Qté">Qté :</label>
                 <input type="text" class=" col-6 form-control" name="Qte' . $DescrChoosenAricle['id'] . '"  value="' . $Qte . '">
-                <small class="QtéHelp" class="form-text text-muted">'.$errorQte[$key].'</small>
+                <small class="QtéHelp" class="form-text text-muted">' . $errorQte[$ChoosenArcticleid] . '</small>
               </div>
                
                <div  class="row">

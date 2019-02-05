@@ -9,6 +9,13 @@ if (!isset($_SESSION['date'])) {
 if (!isset($_SESSION['ChoosenArcticle'])) {
     $_SESSION['ChoosenArcticle'] = array();
 }
+if (!isset($_SESSION['$QtePerArticle'])) {
+    $_SESSION['$QtePerArticle'] = array();
+}
+if (!isset($_SESSION['$errorQte'])) {
+    $_SESSION['$errorQte'] = array();
+}
+
 // print_r($_SESSION);
 
 ?>

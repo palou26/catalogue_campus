@@ -43,6 +43,7 @@ if (!isset($_SESSION['ChoosenArcticle'])) {
         <h2>Catalogue</h2>
     </div>
 
+    <?php include("navigation.php"); ?>
 </header>
 
 <main>

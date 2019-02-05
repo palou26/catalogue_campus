@@ -92,6 +92,7 @@ if (!isset($_GET['idsuppr'])   ) {
         <h2>Mon Panier</h2>
     </div>
 
+    <?php include("navigation.php"); ?>
 </header>
 
 <main>

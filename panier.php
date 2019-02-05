@@ -31,7 +31,7 @@ if (isset($_GET['idsuppr'])) {
     //print_r($ChoosenArcticle);
     //print_r(array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr)))));
     $keyASuppr = array_keys(array_diff($ChoosenArcticle, array_diff($ChoosenArcticle, array($idsuppr))));
-    $ChoosenArcticle = array_values(array_diff($ChoosenArcticle, [$idsuppr]));
+    $ChoosenArcticle = array_diff($ChoosenArcticle, [$idsuppr]);
     $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
 
     //Quantité

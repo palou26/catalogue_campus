@@ -4,11 +4,11 @@ include 'bdd.php';
 session_start();
 
 
-//on récuppère les articles choisis
+//on récuppère les articles choisis ou on les ajoute
 if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
-    $_SESSION['ChoosenArcticle'] = $_POST['ChoosenArcticle'];
-    $ChoosenArcticle = $_POST['ChoosenArcticle'];
+     $_SESSION['ChoosenArcticle'] = array_unique(array_merge($_SESSION['ChoosenArcticle'], $_POST['ChoosenArcticle']));
+    $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
 
 } elseif (isset($_SESSION['ChoosenArcticle'])) {
     $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
@@ -24,6 +24,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
 
 }
+
 
 //Quantité
 

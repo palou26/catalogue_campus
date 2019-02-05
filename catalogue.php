@@ -2,9 +2,14 @@
 include 'functions.php';
 include 'bdd.php';
 session_start();
-$_SESSION['date']=getdate();
+if (!isset($_SESSION['date'])) {
+    $_SESSION['date']=getdate();
+}
 
-// print_r(afficheArticle(2, $idArticle, $NomArticle, $PrixArticle));
+if (!isset($_SESSION['ChoosenArcticle'])) {
+    $_SESSION['ChoosenArcticle'] = array();
+}
+// print_r($_SESSION);
 
 ?>
 

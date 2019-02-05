@@ -48,20 +48,20 @@ $_SESSION['date']=getdate();
 
             for ($i = 0; $i <= 2; $i++) {
                 echo '
-        <div class="row align-items-center">
+        <div class="row align-items-center articlelist">
 
             <div class="col-md-3">
-                <img src="photos/sac' . $idArticle[$i] . '.jpg" class="photosac" alt="Photo du Sac 1" title="Photo du Sac 1">
+                <img src="photos/sac' . $idArticle[$i] . '.jpg" class="photosac" height="80px" alt="Photo du Sac 1" title="Photo du Sac 1">
             </div>
            <div class="col-md-6">
                <h2>  ' . $NomArticle[$i] . '</h2>
            </div>
 
-           <div class="col-md-2  align-items-center">
+           <div class="col-md-2  ">
                <p class="prix">' . $PrixArticle[$i] . '€</p>
            </div>
            
-           <div class="col-md-1  form-check align-items-center">
+           <div class="col-md-1  form-check ">
                 <input class="form-check-input" name="ChoosenArcticle[]" type="checkbox" value="'.$idArticle[$i].'" id="article'.$idArticle[$i].'">
            </div>
 

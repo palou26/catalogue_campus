@@ -17,27 +17,41 @@ header{
 /*////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////*/
 
-.prix {
-	height: 125px;
-    width: 125px;
-	border-radius: 10%;
-	text-align: center;
-	font-size: 60px;
-	background: #58c0cc;
-    vertical-align: middle;
+.articlelist{
+    padding-bottom:  1rem;
+    margin-bottom:  2rem;
+    border-bottom: solid 0.5px #9f9e98;
+
+    margin-top:  1rem;
 }
 
+.prix {
+	height: 100%;
+    width: 100%;
+	border-radius: 10%;
+	text-align: center;
+	font-size: 35px;
+	background: #f5b322;
+    vertical-align: middle;
+    margin: 0px;
+    ;
+}
+
+
+
 .totalcommande {
-    height: 40px;
+    height: 100%;
+    width: 100%;
     border-radius: 10%;
     text-align: center;
     font-size: 35px;
     background:#E3435E;
     vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 2px;
 }
 
 .croixrouge{
-
     font-size: 20px;
     color : #E3435E;
 
@@ -45,12 +59,18 @@ header{
 
 .divtotalcommand{
     border-top: solid 4px #E3435E;
+    padding-top: 10px;
 
+}
+
+.QtéHelp{
+    color : #fffbff;
+    background: #E3435E;
 }
 
 /*	FOOTER */
 
 footer .container-fluid{
-	background:#00545c;
+	background: #9f9e98;
 	padding: 15px 0;
 }

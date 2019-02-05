@@ -4,6 +4,7 @@ include 'bdd.php';
 session_start();
 
 
+//on récuppère les articles choisis
 if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
     $_SESSION['ChoosenArcticle'] = $_POST['ChoosenArcticle'];
@@ -13,10 +14,50 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
     $ChoosenArcticle = $_SESSION['ChoosenArcticle'];
     if (isset($_GET['idsuppr'])) {
         $idsuppr = $_GET['idsuppr'];
-        $ChoosenArcticle = array_diff($ChoosenArcticle, [$idsuppr]);
+        //print_r($ChoosenArcticle);
+        //print_r(array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr)))));
+        $keyASuppr = array_keys(array_diff($ChoosenArcticle,array_diff($ChoosenArcticle, array($idsuppr))));
+        $ChoosenArcticle = array_values(array_diff($ChoosenArcticle, [$idsuppr]));
         $_SESSION['ChoosenArcticle'] = $ChoosenArcticle;
+
     }
+
+
 }
+
+//Quantité
+
+if (!isset($_GET['idsuppr'])   ) {
+    $QtePerArticle = array();
+    $errorQte = array();
+    foreach ($ChoosenArcticle as $ChoosenArcticleId) {
+        if (isset($_POST['Qte' . $ChoosenArcticleId])) {
+            if ( preg_match('/^[0-9]+$/', $_POST['Qte' . $ChoosenArcticleId])) {
+                array_push($QtePerArticle, $_POST['Qte' . $ChoosenArcticleId]);
+                array_push($errorQte , "");
+            } else {
+                array_push($QtePerArticle, 1);
+                array_push($errorQte , "Doit être un entier");
+            }
+        } else {
+            array_push($QtePerArticle, 1);
+            array_push($errorQte , "");
+        }
+    }
+    $_SESSION['$QtePerArticle'] = $QtePerArticle;
+    $_SESSION['$errorQte'] = $errorQte;
+} elseif (isset($_SESSION['$QtePerArticle'])) {
+    $QtePerArticle = $_SESSION['$QtePerArticle'];
+    $errorQte = $_SESSION['$errorQte'];
+    unset($QtePerArticle[$keyASuppr[0]]);
+    unset($errorQte[$keyASuppr[0]]);
+    $QtePerArticle = array_values($QtePerArticle);
+    $errorQte = array_values($errorQte);
+    $_SESSION['$QtePerArticle'] = $QtePerArticle;
+    $_SESSION['$errorQte'] = $errorQte;
+
+}
+
 
 ?>
 
@@ -57,15 +98,16 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
         <form id="recalcul" action="panier.php" method="post">
             <?php
             $CommandSum = 0;
-            foreach ($ChoosenArcticle as $ChoosenArcticleid) {
+            foreach ($ChoosenArcticle as $key => $ChoosenArcticleid) {
 
                 $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $idArticle, $NomArticle, $PrixArticle);
-                $CommandSum = $CommandSum + $DescrChoosenAricle['prix'];
+                $Qte = $QtePerArticle[$key];
+                $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
                 echo '
-        <div class="row align-items-center">
+        <div class="row align-items-center articlelist">
 
             <div class="col-md-3">
-                <img src="photos/sac' . $DescrChoosenAricle['id'] . '.jpg" class="photosac" alt="Photo du Sac ' . $DescrChoosenAricle['id'] . '" title="Photo du Sac ' . $DescrChoosenAricle['id'] . '">
+                <img src="photos/sac' . $DescrChoosenAricle['id'] . '.jpg" class="photosac" height="80px"  alt="Photo du Sac ' . $DescrChoosenAricle['id'] . '" title="Photo du Sac ' . $DescrChoosenAricle['id'] . '">
             </div>
            <div class="col-md-5">
                <h2>  ' . $DescrChoosenAricle['nom'] . '</h2>
@@ -77,12 +119,14 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
 
           <div class="col-md-2  align-items-center">
-              <div  class="row">
-                   <p> Qté </p>  
-              </div> 
+              <div class="row form-group">
+                <label class ="col-6" for="Qté">Qté :</label>
+                <input type="text" class=" col-6 form-control" name="Qte' . $DescrChoosenAricle['id'] . '"  value="' . $Qte . '">
+                <small class="QtéHelp" class="form-text text-muted">'.$errorQte[$key].'</small>
+              </div>
                
                <div  class="row">
-                    <a class = "croixrouge" href="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">&#x2718;</a> 
+                    <a class = "croixrouge" href="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">&#x2718; Supprimer</a> 
                </div>             
            </div>
            
@@ -95,7 +139,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
             echo '
         <div class="row align-items-center">
             <div class="col-md-10  align-items-center divtotalcommand">
-                 <h3> Le total de la commande est  : </h3>
+                 <h3> Total de la commande  : </h3>
             </div>
             <div class="col-md-2  align-items-center">
                  <p class="totalcommande"> ' . $CommandSum . ' €</p>
@@ -104,12 +148,12 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
         ';
 
             ?>
-            <button type="Submit">recalculer</button>
+            <button type="Submit">Calculer et Enregistrer</button>
         </form>
     </div>
 
     <div>
-        <a class = "croixrouge" href="catalogue.php">Retour Catalogue</a>
+        <a class="croixrouge" href="catalogue.php">Retour Catalogue</a>
 
     </div>
 

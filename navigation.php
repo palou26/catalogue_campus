@@ -13,10 +13,13 @@ echo '
             <li class="nav-item">
                 <a class="nav-link" href="panier.php">Panier (' . count($_SESSION['ChoosenArcticle']). ') articles</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.php?newsession=1">Nouvelle Session</a>
+            </li>
         </ul>
     </div>
 </nav>
 
 ';
 
-?>s
+?>

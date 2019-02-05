@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18b6d9d9-ad8c-42c3-adcc-7117e0f9a24d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/panier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,15 +45,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="356" />
-          <entry key="php" value="2995" />
+          <entry key="css" value="391" />
+          <entry key="php" value="3187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="356" />
-          <entry key="HTML" value="35" />
-          <entry key="PHP" value="2960" />
+          <entry key="CSS" value="391" />
+          <entry key="HTML" value="36" />
+          <entry key="PHP" value="3151" />
         </counts>
       </usages-collector>
     </session>
@@ -67,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            <state relative-caret-position="463">
+              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -106,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="60" />
+            <state relative-caret-position="433">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -115,17 +117,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="755">
+              <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="588">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -133,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="504">
+              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -148,8 +150,8 @@
       <find>\n\n\n\n\&lt;\?php\ninclude \'functions\.php\'\;\n\n\$idArticle\=\[1\,2\,3\]\;\n\$NomArticle\=\[\&quot;Sac Noir trop Beau trop cool\&quot;\,\&quot;Sac à dos super top\&quot;\,\&quot;Sac à dos de qualité\&quot;\]\;\n\$PrixArticle\=\[50\, 80\, 100\] \;\n\n\nprint_r\(afficheArticle\(2\, \$idArticle\, \$NomArticle\, \$PrixArticle\)\)\;\n\n\?\&gt;\n\n\n\n\n\&lt;\!doctype html\&gt;\n\&lt;html lang\=\&quot;fr\&quot;\&gt;\n\n\&lt;head\&gt;\n    \&lt;\!\-\- Required meta tags \-\-\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\, shrink\-to\-fit\=no\&quot;\&gt;\n    \&lt;meta name\=\&quot;description\&quot; content\=\&quot;Boutique de sacs\&quot;\&gt;\n    \&lt;\!\-\- Bootstrap CSS \-\-\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;https\:\/\/stackpath\.bootstrapcdn\.com\/bootstrap\/4\.2\.1\/css\/bootstrap\.min\.css\&quot; integrity\=\&quot;sha384\-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\&quot;\n          crossorigin\=\&quot;anonymous\&quot;\&gt;\n    \&lt;link href\=\&quot;https\:\/\/fonts\.googleapis\.com\/css\?family\=Open\+Sans\+Condensed\:300\&quot; rel\=\&quot;stylesheet\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;css\/style\.css\&quot;\&gt;\n\n    \&lt;title\&gt;BAGS STORE Catalogue\&lt;\/title\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\&lt;header\&gt;\n\n    \&lt;div class\=\&quot;container\-fluid \&quot;\&gt;\n        \&lt;h1\&gt;BAGS STORE\&lt;\/h1\&gt;\n    \&lt;\/div\&gt;\n\n\&lt;\/header\&gt;\n\n\&lt;main\&gt;\n    \&lt;div class\=\&quot;container\&quot;\&gt;\n        \&lt;form\&gt;\n\&lt;\?php\n\n\nfor \(\$i \= 0\; \$i \&lt;\= 2\; \$i\+\+\)\n        \{\necho \'\n        \&lt;div class\=\&quot;row align\-items\-center\&quot;\&gt;\n\n            \&lt;div class\=\&quot;col\-md\-3\&quot;\&gt;\n                \&lt;img src\=\&quot;photos\/sac\'\.\$idArticle\[\$i\]\.\'\.jpg\&quot; class\=\&quot;photosac\&quot; alt\=\&quot;Photo du Sac 1\&quot; title\=\&quot;Photo du Sac 1\&quot;\&gt;\n            \&lt;\/div\&gt;\n           \&lt;div class\=\&quot;col\-md\-7\&quot;\&gt;\n               \&lt;h2\&gt;  \'\.\$NomArticle\[\$i\]\.\'\&lt;\/h2\&gt;\n           \&lt;\/div\&gt;\n\n           \&lt;div class\=\&quot;col\-md\-2  align\-items\-center\&quot;\&gt;\n               \&lt;p class\=\&quot;prix\&quot;\&gt;\'\.\$PrixArticle\[\$i\]\.\'\€\&lt;\/p\&gt;\n           \&lt;\/div\&gt;\n\n        \&lt;\/div\&gt;\n    \'\;\n    \}\n\?\&gt;\n\n\n\n            \&lt;button type\=\&quot;submit\&quot; class\=\&quot;btn btn\-primary\&quot;\&gt;Submit\&lt;\/button\&gt;\n        \&lt;\/form\&gt;\n    \&lt;\/div\&gt;\n\&lt;\/main\&gt;\n\&lt;\!\-\- FOOTER \-\-\&gt;\n\&lt;footer\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/footer\&gt;\&lt;\!\-\- FIN FOOTER \-\-\&gt;\n\n\n\&lt;\!\-\- JQUERY \-\-\&gt;\n\&lt;script src\=\&quot;https\:\/\/code\.jquery\.com\/jquery\-3\.3\.1\.slim\.min\.js\&quot; integrity\=\&quot;sha384\-q8i\/X\+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH\+8abtTE1Pi6jizo\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script src\=\&quot;https\:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/popper\.js\/1\.14\.6\/umd\/popper\.min\.js\&quot; integrity\=\&quot;sha384\-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ\/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script src\=\&quot;https\:\/\/stackpath\.bootstrapcdn\.com\/bootstrap\/4\.2\.1\/js\/bootstrap\.min\.js\&quot; integrity\=\&quot;sha384\-B0UglyR\+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U\/mkkaduKaBhlAXv9k\&quot;\n        crossorigin\=\&quot;anonymous\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
       <find>$prix</find>
       <find>fruit</find>
-      <find>print</find>
       <find>unset</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>$NomArticle</replace>
@@ -167,12 +169,12 @@
         <option value="D:/_CAMPUS/Pluvinet_Pascal/2.HTML/MANP/www/css/style.css" />
         <option value="$PROJECT_DIR$/catalogue" />
         <option value="$PROJECT_DIR$/article.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/bdd.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/navigation.php" />
-        <option value="$PROJECT_DIR$/catalogue.php" />
         <option value="$PROJECT_DIR$/panier.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/catalogue.php" />
+        <option value="$PROJECT_DIR$/navigation.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -256,12 +258,12 @@
       <updated>1548925230610</updated>
       <workItem from="1548925232934" duration="11032000" />
       <workItem from="1549266142029" duration="20648000" />
-      <workItem from="1549353026029" duration="26216000" />
+      <workItem from="1549353026029" duration="28502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57896000" />
+    <option name="totallyTimeSpent" value="60182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -349,6 +351,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -363,45 +372,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="433">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="588">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
         </state>
       </provider>
     </entry>

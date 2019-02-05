@@ -34,6 +34,7 @@ header{
 	background: #f5b322;
     vertical-align: middle;
     margin: 0px;
+    position:relative;
     ;
 }
 
@@ -68,9 +69,16 @@ header{
     background: #E3435E;
 }
 
+.big-checkbox {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
 /*	FOOTER */
 
 footer .container-fluid{
 	background: #9f9e98;
 	padding: 15px 0;
+    margin-top: 10px;
 }

@@ -1,7 +1,12 @@
 <?php
 include 'functions.php';
 include 'bdd.php';
-session_start();
+
+
+
+
+NewSession();
+
 if (!isset($_SESSION['date'])) {
     $_SESSION['date']=getdate();
 }
@@ -75,7 +80,7 @@ if (!isset($_SESSION['$errorQte'])) {
            </div>
            
            <div class="col-md-1  form-check ">
-                <input class="form-check-input" name="ChoosenArcticle[]" type="checkbox" value="'.$idArticle[$i].'" id="article'.$idArticle[$i].'">
+                <input class="form-check-input big-checkbox" name="ChoosenArcticle[]" type="checkbox" value="'.$idArticle[$i].'" id="article'.$idArticle[$i].'">
            </div>
 
         </div>

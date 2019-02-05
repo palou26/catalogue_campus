@@ -18,5 +18,24 @@ function afficheArticle($id, $idArticle, $NomArticle, $prix) {
     return $article;
 }
 
+function NewSession(){
+
+
+    if (!isset($_SESSION))
+    {
+        session_start();
+    }
+
+    if (isset($_GET['newsession'])){
+        $_SESSION = array();
+        session_destroy();
+        session_start();
+
+    }
+
+
+
+}
+
 
 ?>

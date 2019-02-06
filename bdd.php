@@ -1,6 +1,15 @@
 <?php
-$idArticle = [1, 2, 3];
-$NomArticle = ["Sac Noir trop Beau trop cool", "Sac à dos super top", "Sac à dos de qualité"];
-$PrixArticle = [50, 80, 100];
+$idArticle = [1251, 22547, 325145];
+$NomArticle = [
+    1251=>"Sac Noir trop Beau trop cool",
+    22547=>"Sac à dos super top",
+    325145=>"Sac à dos de qualité"
+    ];
+
+$PrixArticle = [
+    1251=>50,
+    22547=>80,
+    325145=>100
+];
 
 ?>

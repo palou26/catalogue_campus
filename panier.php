@@ -102,7 +102,7 @@ if (!isset($_GET['idsuppr']) ) {
             $CommandSum = 0;
             foreach ($ChoosenArcticle as $key => $ChoosenArcticleid) {
 
-                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $idArticle, $NomArticle, $PrixArticle);
+                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid,  $NomArticle, $PrixArticle);
                 $Qte = $QtePerArticle[$ChoosenArcticleid];
                 $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
                 echo '

@@ -64,12 +64,12 @@ if (!isset($_SESSION['$errorQte'])) {
             <?php
 
 
-            for ($i = 0; $i <= 2; $i++) {
+            foreach ($idArticle as $i) {
                 echo '
         <div class="row align-items-center articlelist">
 
             <div class="col-md-3">
-                <img src="photos/sac' . $idArticle[$i] . '.jpg" class="photosac" height="80px" alt="Photo du Sac 1" title="Photo du Sac 1">
+                <img src="photos/sac' . $i . '.jpg" class="photosac" height="80px" alt="Photo du Sac ' . $i . '" title="Photo du Sac ' . $i . '">
             </div>
            <div class="col-md-6">
                <h2>  ' . $NomArticle[$i] . '</h2>
@@ -80,7 +80,7 @@ if (!isset($_SESSION['$errorQte'])) {
            </div>
            
            <div class="col-md-1  form-check ">
-                <input class="form-check-input big-checkbox" name="ChoosenArcticle[]" type="checkbox" value="'.$idArticle[$i].'" id="article'.$idArticle[$i].'">
+                <input class="form-check-input big-checkbox" name="ChoosenArcticle[]" type="checkbox" value="'.$i.'" id="article'.$i.'">
            </div>
 
         </div>

@@ -26,11 +26,11 @@ header{
 }
 
 .prix {
-	height: 70px;
+	height: 50px;
     width: 100%;
 	border-radius: 10%;
 	text-align: center;
-	font-size: 35px;
+	font-size: 30px;
 	background: #f5b322;
     vertical-align: middle;
     margin: 0px;
@@ -38,14 +38,25 @@ header{
     ;
 }
 
-
-
-.totalcommande {
-    height: 70px;
+.autretotaux {
+    height: 35px;
     width: 100%;
     border-radius: 10%;
     text-align: center;
-    font-size: 35px;
+    font-size: 20px;
+    background:#ffbbc5;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
+.totalcommande {
+    height: 35px;
+    width: 100%;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
     background:#E3435E;
     vertical-align: middle;
     padding-top: 3px;
@@ -58,8 +69,16 @@ header{
 
 }
 
+
+
+.divtotalarticles, .divfraisport{
+    border-top: solid 2px #ffbbc5;
+    padding-top: 10px;
+
+}
+
 .divtotalcommand{
-    border-top: solid 4px #E3435E;
+    border-top: solid 5px #E3435E;
     padding-top: 10px;
 
 }

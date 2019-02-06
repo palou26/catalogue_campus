@@ -15,6 +15,7 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 
 }
 
+
 // on met la quantité à 1 si elle n'est pas encore enregistrée dans la session
 foreach ($ChoosenArcticle as $ChoosenArcticleId) {
     if (!isset($QtePerArticle[$ChoosenArcticleId])) {
@@ -100,13 +101,15 @@ if (!isset($_GET['idsuppr'])) {
         <form id="recalcul" action="panier.php" method="post">
             <?php
             $CommandSum = 0;
+            $CommandWeight = 0;
             foreach ($ChoosenArcticle as $ChoosenArcticleid) :
 
 
-                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $NomArticle, $PrixArticle);
+                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $NomArticle, $PrixArticle,$WeightArticle);
                 $Qte = $QtePerArticle[$ChoosenArcticleid];
                 $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
-                print_r($CommandSum);
+                $CommandWeight = $CommandWeight + $DescrChoosenAricle['weight'] * $Qte;
+
                 ?>
 
                 <div class="row align-items-center articlelist">
@@ -128,14 +131,14 @@ if (!isset($_GET['idsuppr'])) {
                     <div class="col-md-2  align-items-center">
                         <div class="row form-group">
                             <label class="col-6" for="Qté">Qté :</label>
-                            <input type="text" class=" col-6 form-control" name="Qte<?= $DescrChoosenAricle['id'] ?> "
-                                   value="<?= $Qte ?> ">
+                            <input type="text" class=" col-6 form-control" name="Qte<?= $DescrChoosenAricle['id'] ?>"
+                                   value="<?= $Qte ?>">
                             <small class="QtéHelp"
-                                   class="form-text text-muted"><?= $errorQte[$ChoosenArcticleid] ?> </small>
+                                   class="form-text text-muted"><?= $errorQte[$ChoosenArcticleid] ?></small>
                         </div>
 
                         <div class="row">
-                            <a class="croixrouge" href="panier.php?idsuppr=<?= $DescrChoosenAricle['id'] ?> ">&#x2718;
+                            <a class="croixrouge" href="panier.php?idsuppr=<?= $DescrChoosenAricle['id'] ?>">&#x2718;
                                 Supprimer</a>
                         </div>
                     </div>
@@ -146,14 +149,29 @@ if (!isset($_GET['idsuppr'])) {
 
 
             <div class="row align-items-center">
-                <div class="col-md-10  align-items-center divtotalcommand">
-                    <h3> Total de la commande : </h3>
+                <div class="col-md-10  align-items-center divtotalarticles">
+                    <h4> Total Articles : </h4>
                 </div>
                 <div class="col-md-2  align-items-center">
-                    <p class="totalcommande"> <?= $CommandSum ?> €</p>
+                    <p class="autretotaux"> <?= $CommandSum ?> €</p>
                 </div>
             </div>
-
+            <div class="row align-items-center">
+                <div class="col-md-10  align-items-center divfraisport">
+                    <h4> Frais de port : </h4>
+                </div>
+                <div class="col-md-2  align-items-center">
+                    <p class="autretotaux"> <?= Shipping($CommandWeight,$CommandSum) ?> €</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-10  align-items-center divtotalcommand">
+                    <h4> Total de la commande : </h4>
+                </div>
+                <div class="col-md-2  align-items-center">
+                    <p class="totalcommande"> <?= $CommandSum+Shipping($CommandWeight,$CommandSum) ?> €</p>
+                </div>
+            </div>
             <button type="Submit">Calculer et Enregistrer</button>
         </form>
     </div>

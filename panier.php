@@ -159,7 +159,7 @@ if (!isset($_GET['idsuppr'])) {
     </div>
 
     <div>
-        <a class="croixrouge" href="catalogue.php">Continuer ma commandee</a>
+        <a class="croixrouge" href="catalogue.php">Continuer ma commande</a>
     </div>
 
 </main>

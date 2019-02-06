@@ -7,13 +7,13 @@
 ////////////////////////////////////////
 
 ///
-function afficheArticle($id,  $NomArticle, $prix) {
+function afficheArticle($idarticle,  $NomArticle, $prix) {
 
 
     $article = array();
-    $article['id']=$id;
-    $article['nom']=$NomArticle[$id];
-    $article['prix']=$prix[$id];
+    $article['id']=$idarticle;
+    $article['nom']=$NomArticle[$idarticle];
+    $article['prix']=$prix[$idarticle];
 
     return $article;
 }

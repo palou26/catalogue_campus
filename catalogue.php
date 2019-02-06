@@ -2,13 +2,10 @@
 include 'functions.php';
 include 'bdd.php';
 
-
-
-
 NewSession();
 
 if (!isset($_SESSION['date'])) {
-    $_SESSION['date']=getdate();
+    $_SESSION['date'] = getdate();
 }
 
 if (!isset($_SESSION['ChoosenArcticle'])) {
@@ -21,7 +18,6 @@ if (!isset($_SESSION['$errorQte'])) {
     $_SESSION['$errorQte'] = array();
 }
 
-// print_r($_SESSION);
 
 ?>
 
@@ -62,34 +58,33 @@ if (!isset($_SESSION['$errorQte'])) {
     <div class="container">
         <form action="panier.php" method="post">
             <?php
+            foreach ($idArticle as $i) :
+                ?>
+                <div class="row align-items-center articlelist">
+
+                    <div class="col-md-3">
+                        <img src="photos/sac<?= $i ?>.jpg" class="photosac" height="80px" alt="Photo du Sac <?= $i ?> "
+                             title="Photo du Sac <?= $i ?> ">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>  <?= $NomArticle[$i] ?> </h2>
+                    </div>
+
+                    <div class="col-md-2  ">
+                        <p class="prix"><?= $PrixArticle[$i] ?> €</p>
+                    </div>
+
+                    <div class="col-md-1  form-check ">
+                        <input class="form-check-input big-checkbox" name="ChoosenArcticle[]" type="checkbox"
+                               value="<?= $i ?>" id="article<?= $i ?>">
+                    </div>
+
+                </div>
+
+            <?php endforeach; ?>
 
 
-            foreach ($idArticle as $i) {
-                echo '
-        <div class="row align-items-center articlelist">
-
-            <div class="col-md-3">
-                <img src="photos/sac' . $i . '.jpg" class="photosac" height="80px" alt="Photo du Sac ' . $i . '" title="Photo du Sac ' . $i . '">
-            </div>
-           <div class="col-md-6">
-               <h2>  ' . $NomArticle[$i] . '</h2>
-           </div>
-
-           <div class="col-md-2  ">
-               <p class="prix">' . $PrixArticle[$i] . '€</p>
-           </div>
-           
-           <div class="col-md-1  form-check ">
-                <input class="form-check-input big-checkbox" name="ChoosenArcticle[]" type="checkbox" value="'.$i.'" id="article'.$i.'">
-           </div>
-
-        </div>
-    ';
-            }
-            ?>
-
-
-            <button type="submit" class="">Envoyer au Panier</button>
+            <button type="submit" class="BtnEnvPanier">Envoyer au Panier</button>
         </form>
     </div>
 </main>

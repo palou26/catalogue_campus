@@ -18,8 +18,8 @@ if (isset($_POST['ChoosenArcticle']) && is_array($_POST['ChoosenArcticle'])) {
 // on met la quantité à 1 si elle n'est pas encore enregistrée dans la session
 foreach ($ChoosenArcticle as $ChoosenArcticleId) {
     if (!isset($QtePerArticle[$ChoosenArcticleId])) {
-        $QtePerArticle += [ $ChoosenArcticleId => 1 ];
-        $errorQte += [ $ChoosenArcticleId => "" ];
+        $QtePerArticle += [$ChoosenArcticleId => 1];
+        $errorQte += [$ChoosenArcticleId => ""];
         $_SESSION['$QtePerArticle'] = $QtePerArticle;
         $_SESSION['$errorQte'] = $errorQte;
     }
@@ -42,7 +42,7 @@ if (isset($_GET['idsuppr'])) {
 
 // mise à jour des quantité
 
-if (!isset($_GET['idsuppr']) ) {
+if (!isset($_GET['idsuppr'])) {
     $QtePerArticle = $_SESSION['$QtePerArticle'];
     $errorQte = $_SESSION['$errorQte'];
     foreach ($ChoosenArcticle as $ChoosenArcticleId) {
@@ -100,63 +100,66 @@ if (!isset($_GET['idsuppr']) ) {
         <form id="recalcul" action="panier.php" method="post">
             <?php
             $CommandSum = 0;
-            foreach ($ChoosenArcticle as $key => $ChoosenArcticleid) {
+            foreach ($ChoosenArcticle as $ChoosenArcticleid) :
 
-                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid,  $NomArticle, $PrixArticle);
+
+                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $NomArticle, $PrixArticle);
                 $Qte = $QtePerArticle[$ChoosenArcticleid];
                 $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
-                echo '
-        <div class="row align-items-center articlelist">
+                print_r($CommandSum);
+                ?>
 
-            <div class="col-md-3">
-                <img src="photos/sac' . $DescrChoosenAricle['id'] . '.jpg" class="photosac" height="80px"  alt="Photo du Sac ' . $DescrChoosenAricle['id'] . '" title="Photo du Sac ' . $DescrChoosenAricle['id'] . '">
+                <div class="row align-items-center articlelist">
+
+                    <div class="col-md-3">
+                        <img src="photos/sac<?= $DescrChoosenAricle['id'] ?>.jpg" class="photosac" height="80px"
+                             alt="Photo du Sac <?= $DescrChoosenAricle['id'] ?> "
+                             title="Photo du Sac <?= $DescrChoosenAricle['id'] ?> ">
+                    </div>
+                    <div class="col-md-5">
+                        <h2>  <?= $DescrChoosenAricle['nom'] ?> </h2>
+                    </div>
+
+                    <div class="col-md-2  align-items-center">
+                        <p class="prix"><?= $DescrChoosenAricle['prix'] ?> €</p>
+                    </div>
+
+
+                    <div class="col-md-2  align-items-center">
+                        <div class="row form-group">
+                            <label class="col-6" for="Qté">Qté :</label>
+                            <input type="text" class=" col-6 form-control" name="Qte<?= $DescrChoosenAricle['id'] ?> "
+                                   value="<?= $Qte ?> ">
+                            <small class="QtéHelp"
+                                   class="form-text text-muted"><?= $errorQte[$ChoosenArcticleid] ?> </small>
+                        </div>
+
+                        <div class="row">
+                            <a class="croixrouge" href="panier.php?idsuppr=<?= $DescrChoosenAricle['id'] ?> ">&#x2718;
+                                Supprimer</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            <?php endforeach; ?>
+
+
+            <div class="row align-items-center">
+                <div class="col-md-10  align-items-center divtotalcommand">
+                    <h3> Total de la commande : </h3>
+                </div>
+                <div class="col-md-2  align-items-center">
+                    <p class="totalcommande"> <?= $CommandSum ?> €</p>
+                </div>
             </div>
-           <div class="col-md-5">
-               <h2>  ' . $DescrChoosenAricle['nom'] . '</h2>
-           </div>
 
-           <div class="col-md-2  align-items-center">
-               <p class="prix">' . $DescrChoosenAricle['prix'] . '€</p>               
-           </div>
-
-
-          <div class="col-md-2  align-items-center">
-              <div class="row form-group">
-                <label class ="col-6" for="Qté">Qté :</label>
-                <input type="text" class=" col-6 form-control" name="Qte' . $DescrChoosenAricle['id'] . '"  value="' . $Qte . '">
-                <small class="QtéHelp" class="form-text text-muted">' . $errorQte[$ChoosenArcticleid] . '</small>
-              </div>
-               
-               <div  class="row">
-                    <a class = "croixrouge" href="panier.php?idsuppr=' . $DescrChoosenAricle['id'] . '">&#x2718; Supprimer</a> 
-               </div>             
-           </div>
-           
-           
-        </div>
-    ';
-            }
-
-            //Display the sum of the command
-            echo '
-        <div class="row align-items-center">
-            <div class="col-md-10  align-items-center divtotalcommand">
-                 <h3> Total de la commande  : </h3>
-            </div>
-            <div class="col-md-2  align-items-center">
-                 <p class="totalcommande"> ' . $CommandSum . ' €</p>
-            </div>
-        </div>
-        ';
-
-            ?>
             <button type="Submit">Calculer et Enregistrer</button>
         </form>
     </div>
 
     <div>
-        <a class="croixrouge" href="catalogue.php">Retour Catalogue</a>
-
+        <a class="croixrouge" href="catalogue.php">Continuer ma commandee</a>
     </div>
 
 </main>

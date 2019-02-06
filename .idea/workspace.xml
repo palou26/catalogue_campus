@@ -269,12 +269,12 @@
       <workItem from="1548925232934" duration="11032000" />
       <workItem from="1549266142029" duration="20648000" />
       <workItem from="1549353026029" duration="28705000" />
-      <workItem from="1549437912872" duration="1157000" />
+      <workItem from="1549437912872" duration="1402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61542000" />
+    <option name="totallyTimeSpent" value="61787000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,11 +287,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13113007" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="0" sideWeight="0.50068027" side_tool="true" weight="0.13113007" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49931973" visible="true" weight="0.13113007" />
+      <window_info id="Structure" order="2" sideWeight="0.50068027" side_tool="true" weight="0.13113007" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="0" />
       <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.18242492" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />

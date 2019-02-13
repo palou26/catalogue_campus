@@ -15,6 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="catalogue.php?newsession=1">Nouvelle Session</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="connexion.php">Connexion</a>
+            </li>
         </ul>
     </div>
 </nav>

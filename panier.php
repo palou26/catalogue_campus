@@ -48,8 +48,8 @@ if (!isset($_GET['idsuppr'])) {
     $errorQte = $_SESSION['$errorQte'];
     foreach ($ChoosenArcticle as $ChoosenArcticleId) {
         if (isset($_POST['Qte' . $ChoosenArcticleId])) {
-            if (preg_match('/^[0-9]+$/', $_POST['Qte' . $ChoosenArcticleId])) {
-                $QtePerArticle[$ChoosenArcticleId] = $_POST['Qte' . $ChoosenArcticleId];
+            if (preg_match('/^[0-9]+$/', htmlspecialchars($_POST['Qte' . $ChoosenArcticleId]))) {  //htmlspecialchars pour eviter faille xss
+                $QtePerArticle[$ChoosenArcticleId] = htmlspecialchars($_POST['Qte' . $ChoosenArcticleId]);
                 $errorQte[$ChoosenArcticleId] = "";
             } else {
                 $errorQte[$ChoosenArcticleId] = "Doit être un entier";

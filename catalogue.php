@@ -17,7 +17,9 @@ if (!isset($_SESSION['$QtePerArticle'])) {
 if (!isset($_SESSION['$errorQte'])) {
     $_SESSION['$errorQte'] = array();
 }
-
+if (!isset($_SESSION['$user']) && !isset($_POST[''])) {
+    $_SESSION['$errorQte'] = array();
+}
 
 ?>
 

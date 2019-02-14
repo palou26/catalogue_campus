@@ -15,9 +15,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="catalogue.php?newsession=1">Nouvelle Session</a>
             </li>
+
+            <?php if (!isset($_SESSION['email'])):  ?>
             <li class="nav-item">
                 <a class="nav-link" href="connexion.php">Connexion</a>
             </li>
+              <?php endif; ?>
+
+            <?php if (isset($_SESSION['email'])): ?>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.php">-----Bonjour <?= $_SESSION['NomUser'] ?> <?= $_SESSION['PrenomUser'] ?> </a>
+            </li>
+              <?php endif; ?>
+
+
         </ul>
     </div>
 </nav>

@@ -1,5 +1,6 @@
 <?php
 include 'functions.php';
+include 'functions_bdd.php';
 include 'bdd.php';
 session_start();
 //initialisation

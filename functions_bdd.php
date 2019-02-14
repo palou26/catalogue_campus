@@ -22,7 +22,7 @@ function connexionBDD()
 
 /// Liste des catégories
 function BDDcategorie(){
-
+    $bdd=connexionBDD();
     $requeteSQL = "SELECT * FROM categorie";
     $resQuery = $bdd->query($requeteSQL);
     return $resQuery->fetchAll();
@@ -31,22 +31,31 @@ function BDDcategorie(){
 
 /// Liste des catégories
 function BDDarticle(){
-
+    $bdd=connexionBDD();
     $requeteSQL = "SELECT * FROM categorie";
     $resQuery = $bdd->query($requeteSQL);
     return $resQuery->fetchAll();
 
 }
 
-/// Liste des catégories
-function NewUser($nom, $prenom, $mail, $motdepasse){
+/// Liste des users
+function BDDuser(){
+    $bdd=connexionBDD();
+    $requeteSQL = "SELECT * FROM utilisateur";
+    $resQuery = $bdd->query($requeteSQL);
+    return $resQuery->fetchAll();
 
+}
+
+/// nouvel utilisateur
+function NewUser($nom, $prenom, $mail, $motdepasse){
+    $bdd=connexionBDD();
     $query = $bdd->prepare( "SELECT COUNT(email) FROMt utilisateur WHERE email = ?" );
     $query->bindValue( 1, $email );
     $query->execute();
     print_r($query);
     if( $query == 0 ) {
-        $requeteSQL = "INSERT INTO utilisateur(IDUser, NomUser, PrenomUser, email, mdp) VALUES (?,?,?,?)");
+        $requeteSQL = "INSERT INTO utilisateur(IDUser, NomUser, PrenomUser, email, mdp) VALUES (?,?,?,?)";
         $req = $bdd->prepare($requeteSQL);
         $req->execute(array($nom, $prenom, $mail, $motdepasse));
     }

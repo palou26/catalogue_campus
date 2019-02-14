@@ -19,6 +19,10 @@ if (!isset($_SESSION['$errorQte'])) {
     $_SESSION['$errorQte'] = array();
 }
 
+if (!isset($_SESSION['connexion'])) {
+    $_SESSION['connexion'] = "non";
+}
+
 
 ?>
 
@@ -56,7 +60,7 @@ if (!isset($_SESSION['$errorQte'])) {
 </header>
 
 <main>
-    <div class="container">
+    <div class="container listcatalog">
         <form action="panier.php" method="post">
             <button type="submit" class="BtnEnvPanier">Envoyer au Panier</button>
             <?php
@@ -75,6 +79,7 @@ if (!isset($_SESSION['$errorQte'])) {
                     </div>
                     <div class="col-md-6">
                         <h2>  <?= $article['NomArticle'] ?> </h2>
+                        <small> <?= $article['Description'] ?> - Poids :  <?= $article['Poids'] ?>g</small>
                     </div>
 
                     <div class="col-md-2  ">
@@ -90,10 +95,26 @@ if (!isset($_SESSION['$errorQte'])) {
 
             <?php endforeach; ?>
 
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
 
             <button type="submit" class="BtnEnvPanier">Envoyer au Panier</button>
         </form>
     </div>
+
 </main>
 <!-- FOOTER -->
 <footer>

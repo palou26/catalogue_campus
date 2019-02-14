@@ -39,6 +39,7 @@ if ($conok) {
     $_SESSION['IDUser'] = $userinfo['IDUser'];
     $_SESSION['NomUser'] = $Nom;
     $_SESSION['PrenomUser'] = $Prenom;
+    $_SESSION['connexion'] = "oui";
     print_r($_SESSION);
    header( 'Location: catalogue.php');
     exit();

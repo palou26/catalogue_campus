@@ -174,6 +174,7 @@ if (!isset($_GET['idsuppr'])) {
                 </div>
             </div>
             <button type="Submit">Calculer et Enregistrer</button>
+            <button type="Submit" formaction="commande.php">Passer Commande</button>
         </form>
     </div>
 

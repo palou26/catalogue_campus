@@ -48,16 +48,18 @@ function BDDuser(){
 }
 
 /// nouvel utilisateur
-function NewUser($nom, $prenom, $mail, $motdepasse){
+function NewUser($nom, $prenom, $email, $motdepasse){
     $bdd=connexionBDD();
-    $query = $bdd->prepare( "SELECT COUNT(email) FROMt utilisateur WHERE email = ?" );
+    $query = $bdd->prepare( "SELECT COUNT(email) FROM utilisateur WHERE email = ? " );
     $query->bindValue( 1, $email );
     $query->execute();
-    print_r($query);
-    if( $query == 0 ) {
-        $requeteSQL = "INSERT INTO utilisateur(IDUser, NomUser, PrenomUser, email, mdp) VALUES (?,?,?,?)";
+    $result=$query->fetchColumn();
+    print_r($result);
+    if( $result == 0 ) {
+        $requeteSQL = "INSERT INTO utilisateur( NomUser, PrenomUser, email, mdp) VALUES (?,?,?,?)";
         $req = $bdd->prepare($requeteSQL);
-        $req->execute(array($nom, $prenom, $mail, $motdepasse));
+        $req->execute(array($nom, $prenom, $email, $motdepasse));
+        print_r("insert ok");
     }
     else {
         echo "Email exists yet !";
@@ -66,5 +68,13 @@ function NewUser($nom, $prenom, $mail, $motdepasse){
 
 }
 
+function UserInfo( $email)
+{
+    $bdd = connexionBDD();
+    $query = $bdd->prepare("SELECT * FROM utilisateur WHERE email = ? LIMIT 1");
+    $query->bindValue(1, $email);
+    $query->execute();
+    return $query->fetch();
+}
 
 ?>

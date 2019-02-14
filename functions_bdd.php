@@ -29,12 +29,22 @@ function BDDcategorie(){
 
 }
 
-/// Liste des catégories
+/// Liste des articles
 function BDDarticle(){
     $bdd=connexionBDD();
     $requeteSQL = "SELECT * FROM article";
     $resQuery = $bdd->query($requeteSQL);
     return $resQuery->fetchAll();
+
+}
+
+function BDDDisplayArticle($articleID){
+    $bdd=connexionBDD();
+    $requeteSQL = "SELECT * FROM article where IDarticle = ?";
+    $query = $bdd->prepare( $requeteSQL );
+    $query->bindValue( 1, $articleID );
+    $query->execute();
+    return $query->fetch();
 
 }
 

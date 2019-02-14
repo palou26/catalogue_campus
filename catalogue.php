@@ -20,9 +20,6 @@ if (!isset($_SESSION['$errorQte'])) {
 }
 
 
-
-
-
 ?>
 
 
@@ -61,8 +58,9 @@ if (!isset($_SESSION['$errorQte'])) {
 <main>
     <div class="container">
         <form action="panier.php" method="post">
+            <button type="submit" class="BtnEnvPanier">Envoyer au Panier</button>
             <?php
-            $articles=BDDarticle();
+            $articles = BDDarticle();
             foreach ($articles as $article) :
 
                 $i = $article['IDarticle'];
@@ -71,7 +69,8 @@ if (!isset($_SESSION['$errorQte'])) {
                 <div class="row align-items-center articlelist">
 
                     <div class="col-md-3">
-                        <img src="photos/article (<?= $i ?>).jpg" class="photosac" height="80px" alt="Photo du Sac <?= $i ?> "
+                        <img src="photos/article (<?= $i ?>).jpg" class="photosac" height="80px"
+                             alt="Photo du Sac <?= $i ?> "
                              title="Photo du Sac <?= $i ?> ">
                     </div>
                     <div class="col-md-6">

@@ -106,40 +106,40 @@ if (!isset($_GET['idsuppr'])) {
             foreach ($ChoosenArcticle as $ChoosenArcticleid) :
 
 
-                $DescrChoosenAricle = afficheArticle($ChoosenArcticleid, $NomArticle, $PrixArticle,$WeightArticle);
+                $DescrChoosenAricle = BDDDisplayArticle($ChoosenArcticleid);
                 $Qte = $QtePerArticle[$ChoosenArcticleid];
-                $CommandSum = $CommandSum + $DescrChoosenAricle['prix'] * $Qte;
-                $CommandWeight = $CommandWeight + $DescrChoosenAricle['weight'] * $Qte;
+                $CommandSum = $CommandSum + $DescrChoosenAricle['Prix'] * $Qte;
+                $CommandWeight = $CommandWeight + $DescrChoosenAricle['Poids'] * $Qte;
 
                 ?>
 
                 <div class="row align-items-center articlelist">
 
                     <div class="col-md-3">
-                        <img src="photos/sac<?= $DescrChoosenAricle['id'] ?>.jpg" class="photosac" height="80px"
-                             alt="Photo du Sac <?= $DescrChoosenAricle['id'] ?> "
-                             title="Photo du Sac <?= $DescrChoosenAricle['id'] ?> ">
+                        <img src="photos/article (<?= $DescrChoosenAricle['IDarticle'] ?>).jpg" class="photosac" height="80px"
+                             alt="Photo du Sac <?= $DescrChoosenAricle['IDarticle'] ?> "
+                             title="Photo du Sac <?= $DescrChoosenAricle['IDarticle'] ?> ">
                     </div>
                     <div class="col-md-5">
-                        <h2>  <?= $DescrChoosenAricle['nom'] ?> </h2>
+                        <h2>  <?= $DescrChoosenAricle['NomArticle'] ?> </h2>
                     </div>
 
                     <div class="col-md-2  align-items-center">
-                        <p class="prix"><?= $DescrChoosenAricle['prix'] ?> €</p>
+                        <p class="prix"><?= $DescrChoosenAricle['Prix'] ?> €</p>
                     </div>
 
 
                     <div class="col-md-2  align-items-center">
                         <div class="row form-group">
                             <label class="col-6" for="Qté">Qté :</label>
-                            <input type="text" class=" col-6 form-control" name="Qte<?= $DescrChoosenAricle['id'] ?>"
+                            <input type="text" class=" col-6 form-control" name="Qte<?= $DescrChoosenAricle['IDarticle'] ?>"
                                    value="<?= $Qte ?>">
                             <small class="QtéHelp"
                                    class="form-text text-muted"><?= $errorQte[$ChoosenArcticleid] ?></small>
                         </div>
 
                         <div class="row">
-                            <a class="croixrouge" href="panier.php?idsuppr=<?= $DescrChoosenAricle['id'] ?>">&#x2718;
+                            <a class="croixrouge" href="panier.php?idsuppr=<?= $DescrChoosenAricle['IDarticle'] ?>">&#x2718;
                                 Supprimer</a>
                         </div>
                     </div>

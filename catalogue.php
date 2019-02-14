@@ -62,20 +62,24 @@ if (!isset($_SESSION['$errorQte'])) {
     <div class="container">
         <form action="panier.php" method="post">
             <?php
-            foreach ($idArticle as $i) :
+            $articles=BDDarticle();
+            foreach ($articles as $article) :
+
+                $i = $article['IDarticle'];
+
                 ?>
                 <div class="row align-items-center articlelist">
 
                     <div class="col-md-3">
-                        <img src="photos/sac<?= $i ?>.jpg" class="photosac" height="80px" alt="Photo du Sac <?= $i ?> "
+                        <img src="photos/article (<?= $i ?>).jpg" class="photosac" height="80px" alt="Photo du Sac <?= $i ?> "
                              title="Photo du Sac <?= $i ?> ">
                     </div>
                     <div class="col-md-6">
-                        <h2>  <?= $NomArticle[$i] ?> </h2>
+                        <h2>  <?= $article['NomArticle'] ?> </h2>
                     </div>
 
                     <div class="col-md-2  ">
-                        <p class="prix"><?= $PrixArticle[$i] ?> €</p>
+                        <p class="prix"><?= $article['Prix'] ?> €</p>
                     </div>
 
                     <div class="col-md-1  form-check ">

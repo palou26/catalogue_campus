@@ -32,7 +32,7 @@ function BDDcategorie(){
 /// Liste des catégories
 function BDDarticle(){
     $bdd=connexionBDD();
-    $requeteSQL = "SELECT * FROM categorie";
+    $requeteSQL = "SELECT * FROM article";
     $resQuery = $bdd->query($requeteSQL);
     return $resQuery->fetchAll();
 

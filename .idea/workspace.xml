@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18b6d9d9-ad8c-42c3-adcc-7117e0f9a24d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/newconnexion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newconnexion_ok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions_bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions_bdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/sac1251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/sac22547.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/sac325145.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,12 +84,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="1952" />
+          <entry key="php" value="2021" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1949" />
+          <entry key="PHP" value="2018" />
           <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
@@ -109,11 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="7" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="277">
+              <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -157,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions_bdd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+            <state relative-caret-position="326">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -190,7 +192,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newconnexion_ok.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
@@ -242,13 +244,13 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/Test_pdo_php_mysql.php" />
         <option value="$PROJECT_DIR$/panier.php" />
-        <option value="$PROJECT_DIR$/catalogue.php" />
         <option value="$PROJECT_DIR$/navigation.php" />
         <option value="$PROJECT_DIR$/connexion_ok.php" />
-        <option value="$PROJECT_DIR$/functions_bdd.php" />
         <option value="$PROJECT_DIR$/newconnexion.php" />
         <option value="$PROJECT_DIR$/connexion.php" />
         <option value="$PROJECT_DIR$/newconnexion_ok.php" />
+        <option value="$PROJECT_DIR$/functions_bdd.php" />
+        <option value="$PROJECT_DIR$/catalogue.php" />
       </list>
     </option>
   </component>
@@ -340,12 +342,12 @@
       <workItem from="1549437912872" duration="10649000" />
       <workItem from="1549526835191" duration="713000" />
       <workItem from="1550048303240" duration="13975000" />
-      <workItem from="1550129949723" duration="4160000" />
+      <workItem from="1550129949723" duration="5934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89882000" />
+    <option name="totallyTimeSpent" value="91656000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,10 +363,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50068027" side_tool="true" weight="0.13113007" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49931973" visible="true" weight="0.13326226" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49931973" visible="true" weight="0.13326226" />
       <window_info id="Structure" order="2" sideWeight="0.50068027" side_tool="true" weight="0.13113007" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.5038932" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.5038932" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
@@ -466,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="7" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/panier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -501,20 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connexion_ok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions_bdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newconnexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -533,6 +514,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connexion_ok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions_bdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
         </state>
       </provider>
     </entry>
